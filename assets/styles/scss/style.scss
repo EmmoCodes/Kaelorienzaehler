@@ -2,3 +2,72 @@
 @use './mixins';
 @use './resets';
 @use './variables';
+
+h1 {
+  text-align: center;
+}
+
+main {
+  background-color: lightgray;
+  max-width: 20vw;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 70vh;
+  border-radius: 10px;
+}
+
+#activity-level {
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
+button {
+  background-color: peachpuff;
+  min-width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-left: 100px;
+}
+
+article {
+  margin-top: 80px;
+
+  div:nth-of-type(1) {
+    background-color: lightblue;
+    display: flex;
+    justify-content: flex-end;
+    p {
+      display: inline-block;
+      border-left: 2px black solid;
+      padding-left: 2px;
+      padding-right: 60px;
+    }
+  }
+
+  div:nth-of-type(2) {
+    display: flex;
+    background-color: white;
+    .bmr-kcal {
+      padding-left: 170px;
+      padding-right: 20px;
+    }
+  }
+
+  div:nth-of-type(3) {
+    display: flex;
+    background-color: white;
+    .total-kcal {
+      padding-left: 155px;
+      padding-right: 20px;
+    }
+  }
+}
