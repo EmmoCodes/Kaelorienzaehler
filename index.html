@@ -8,5 +8,63 @@
     <title>Document</title>
   </head>
 
-  <body></body>
+  <body>
+    <main>
+      <form action="#">
+        <section>
+          <h1>Calories Calculator</h1>
+          <label for="body-height">Bodyheight</label>
+          <input type="number" name="body-heigth" id="body-height" />
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" />
+          <label for="body-weight">Bodyweight</label>
+          <input type="number" name="body-weight" id="body-weigth" />
+          <div>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="she" />
+            <label for="she">She</label>
+            <input type="radio" name="gender" id="he" />
+            <label for="he">He</label>
+          </div>
+          <label for="activity">Work- and Activitylevel</label>
+          <select name="activity-level" id="activity-level">
+            <option value="sleep">Sleep</option>
+            <option value="sit-or-lay">Only sit or lay</option>
+            <option value="office-low">
+              Only sitting activity with low to no physical activity in leisure time, e.g: Office Work
+            </option>
+            <option value="office-high">
+              Sitting activity with temporarily or staying activity e.g: Students, Assembly line workers, Laboratory
+              workers, Drivers
+            </option>
+            <option value="stay">
+              Mostly staying or warlking activity e.g: Sellers, Waiters, Craftsmen, Mechanics, Housewives
+            </option>
+            <option value="extreme">Physically demanding jobs</option>
+          </select>
+          <button>Submit</button>
+        </section>
+        <section>
+          <article>
+            <div>
+              <p>kcal</p>
+              <p>kJ</p>
+            </div>
+            <div>
+              <p>BMR</p>
+              <span class="bmr-kcal"></span><span class="bmr-kj"></span>
+            </div>
+            <div>
+              <p>TOTAL</p>
+              <span class="total-kcal"></span><span class="total-kj"></span>
+            </div>
+            <p>
+              The result of this calculator is for should be used for orentation, because the can be multiple sources
+              mistakes, like for instance diviating BMR time estimations.
+            </p>
+          </article>
+        </section>
+      </form>
+    </main>
+  </body>
 </html>

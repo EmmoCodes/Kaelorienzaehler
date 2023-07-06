@@ -2,3 +2,34 @@
 @use './mixins';
 @use './resets';
 @use './variables';
+
+main {
+  background-color: lightgray;
+  max-width: 20vw;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 70vh;
+}
+
+#activity-level {
+  max-width: 200px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+article {
+  margin-top: 80px;
+
+  div:nth-of-type(1) {
+    background-color: lightblue;
+    p {
+      display: inline-block;
+    }
+  }
+}
