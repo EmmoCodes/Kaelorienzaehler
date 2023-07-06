@@ -1,20 +1,51 @@
 'use strict'
 
-/*
-#Heute werden wir einen Kalorienrechner programmieren. 
-#Zuerst müssen wir den Grundumsatz berechnen. Der Grundumsatz wird anhand der Harris Benedict Formel berechnet.
-#Grundumsatz bei Männern (Kalorien je Tag)
-#66.47 + (13.7 * Körpergewicht in kg) + (5 * Körpergröße in cm) – (6.8 * Alter in Jahren) = Grundumsatz 
-#Grundumsatz bei Frauen (Kalorien je Tag)
-#655.1 + (9.6 * Körpergewicht in kg) + (1.8 * Körpergröße in cm) – (4.7 * Alter in Jahren) = Grundumsatz
-? Das Ergebnis wird in Kilokalorien ausgegeben.
+const inputBodyHeight = document.body.querySelector('#body-height')
+const inputAge = document.body.querySelector('#age')
+const inputBodyWeight = document.body.querySelector('#body-weight')
+const inputGenderShe = document.body.querySelector('#she')
+const inputGenderHe = document.body.querySelector('#he')
+const ActivityLevel = document.body.querySelector('#activity-level')
+const calculatorBmr = document.body.querySelector('.bmr-calculate')
+const outputBmrKcal = document.body.querySelector('.bmr-kcal')
+const outputBmrKj = document.body.querySelector('.bmr-kj')
+const outputTotalKcal = document.body.querySelector('.total-kcal')
+const outputTotalKj = document.body.querySelector('.total-kj')
 
-=====================================================
-- index.html
-- constanten ziehen
-- dropdownlist ziehen und werte definieren
-- gedanken ueber events machen
-- inputfields verbinden mit radio buttons um mit der value vom input arbeiten zu koennen ifelse
-- umsaetze mit let variablen berechnen ( neu definieren in ifelse )
-? 1cal = 4184j
-*/
+calculatorBmr.addEventListener('submit', event => {
+  event.preventDefault()
+
+  const heightValue = inputBodyHeight.value
+  const ageValue = inputAge.value
+  const weightValue = inputBodyWeight.value
+
+  let ActivityLevelValue = Number(ActivityLevel.options[ActivityLevel.selectedIndex].value)
+
+  let bodyWeightCalc
+  let ageCalc
+  let bodyHeightCalc
+  let resultBmr
+  let resultTotal
+
+  if (inputGenderShe.checked) {
+    bodyWeightCalc = 9.6 * Number(weightValue)
+    bodyHeightCalc = 1.8 * Number(heightValue)
+    ageCalc = 4.7 * Number(ageValue)
+    resultBmr = 65.51 + bodyWeightCalc + bodyHeightCalc - ageCalc
+    resultTotal = resultBmr * ActivityLevelValue
+    outputBmrKcal.textContent = resultBmr.toFixed(3)
+    outputBmrKj.textContent = (resultBmr * 4.184).toFixed(3)
+    outputTotalKcal.textContent = resultTotal.toFixed(3)
+    outputTotalKj.textContent = (resultTotal * 4.184).toFixed(3)
+  } else if (inputGenderHe.checked) {
+    bodyWeightCalc = 13.7 * weightValue
+    bodyHeightCalc = 5 * heightValue
+    ageCalc = 6.8 * ageValue
+    resultBmr = 66.47 + bodyWeightCalc + bodyHeightCalc - ageCalc
+    resultTotal = resultBmr * ActivityLevelValue
+    outputBmrKcal.textContent = resultBmr.toFixed(3)
+    outputBmrKj.textContent = (resultBmr * 4.184).toFixed(3)
+    outputTotalKcal.textContent = resultTotal.toFixed(3)
+    outputTotalKj.textContent = (resultTotal * 4.184).toFixed(3)
+  }
+})

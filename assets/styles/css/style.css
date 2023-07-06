@@ -76,6 +76,10 @@ h6 {
   isolation: isolate;
 }
 
+h1 {
+  text-align: center;
+}
+
 main {
   background-color: lightgray;
   max-width: 20vw;
@@ -84,16 +88,27 @@ main {
   top: 50%;
   left: 50%;
   height: 70vh;
+  border-radius: 10px;
 }
 
 #activity-level {
-  max-width: 200px;
+  max-width: 350px;
+  border-radius: 10px;
 }
 
 section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 5%;
+}
+
+button {
+  background-color: peachpuff;
+  min-width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-left: 100px;
 }
 
 article {
@@ -101,9 +116,30 @@ article {
 }
 article div:nth-of-type(1) {
   background-color: lightblue;
+  display: flex;
+  justify-content: flex-end;
 }
 article div:nth-of-type(1) p {
   display: inline-block;
+  border-left: 2px black solid;
+  padding-left: 2px;
+  padding-right: 60px;
+}
+article div:nth-of-type(2) {
+  display: flex;
+  background-color: white;
+}
+article div:nth-of-type(2) .bmr-kcal {
+  padding-left: 170px;
+  padding-right: 20px;
+}
+article div:nth-of-type(3) {
+  display: flex;
+  background-color: white;
+}
+article div:nth-of-type(3) .total-kcal {
+  padding-left: 155px;
+  padding-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

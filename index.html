@@ -10,7 +10,7 @@
 
   <body>
     <main>
-      <form action="#">
+      <form action="#" class="bmr-calculate">
         <section>
           <h1>Calories Calculator</h1>
           <label for="body-height">Bodyheight</label>
@@ -18,32 +18,32 @@
           <label for="age">Age</label>
           <input type="number" name="age" id="age" />
           <label for="body-weight">Bodyweight</label>
-          <input type="number" name="body-weight" id="body-weigth" />
+          <input type="number" name="body-weight" id="body-weight" />
           <div>
             <label for="gender">Gender</label>
-            <input type="radio" name="gender" id="she" />
+            <input type="radio" name="gender" id="she" checked />
             <label for="she">She</label>
             <input type="radio" name="gender" id="he" />
             <label for="he">He</label>
           </div>
           <label for="activity">Work- and Activitylevel</label>
           <select name="activity-level" id="activity-level">
-            <option value="sleep">Sleep</option>
-            <option value="sit-or-lay">Only sit or lay</option>
-            <option value="office-low">
+            <option value="0.95">Sleep</option>
+            <option value="1.2">Only sit or lay</option>
+            <option value="1.5">
               Only sitting activity with low to no physical activity in leisure time, e.g: Office Work
             </option>
-            <option value="office-high">
+            <option value="1.7">
               Sitting activity with temporarily or staying activity e.g: Students, Assembly line workers, Laboratory
               workers, Drivers
             </option>
-            <option value="stay">
+            <option value="1.9">
               Mostly staying or warlking activity e.g: Sellers, Waiters, Craftsmen, Mechanics, Housewives
             </option>
-            <option value="extreme">Physically demanding jobs</option>
+            <option value="2.2">Physically demanding jobs</option>
           </select>
-          <button>Submit</button>
         </section>
+        <button>Submit</button>
         <section>
           <article>
             <div>
