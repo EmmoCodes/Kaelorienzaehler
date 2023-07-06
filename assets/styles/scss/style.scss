@@ -2,3 +2,7 @@
 @use './mixins';
 @use './resets';
 @use './variables';
+
+form{
+    width: 50%;
+}

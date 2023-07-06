@@ -5,8 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/css/style.css" />
     <script defer src="./assets/js/index.js"></script>
-    <title>Document</title>
+    <title>Kalorienrechner</title>
   </head>
 
-  <body></body>
+  <body>
+    <form>
+      <h1>Calories Calulator</h1>
+      <section>
+
+        <label for="body-height">Bodyheight</label>
+        <input type="number" name="body-height" id="body-height">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <label for="body-weight">Bodyweight</label>
+        <input type="number" name="body-weight" id="body-weight">
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="she">
+        <label for="she">She</label>
+        <input type="radio" name="gender" id="he">
+        <label for="he">He</label>
+        <label for="activity">Work- and Activitylevel</label>
+        <select name="activity-level" id="activity-level">
+          <option value="sleep">Sleeping</option>
+          <option value="sit or lay">Only sitting or lying down</option>
+          <option value="office-low">Exclusively sitting work with little or no physical activity in leisure time, e.g. office work
+          </option>
+          <option value="office-high">Sitting work with occasional walking or standing, e.g. students, assembly line workers, laboratory technicians, drivers</option>
+          <option value="stay">Predominantly walking or standing work, e.g. salespeople, waiters, craftsmen, mechanics, housewives</option>
+          <option value="extreme">Physically demanding professional work</option>
+        </select>
+        <button>Submit</button>
+      </section>
+      <section>
+        <article>
+          <div><p>kcal</p><p>kJ</p></div>
+          <div><p>BMR</p><span class="bmr-kcal"></span> <span class="bmr-kJ"></span></div>
+          <div>
+            <p>TOTAL</p>
+            <span class="total-kcal"></span>
+            <span class="total-kJ"></span>
+          </div>
+          <p>The result of the calculator should be seen as a reference value, as there are various possibilities for errors such as deviating basal metabolic rate, incorrect time estimation, etc.</p>
+        </article>
+      </section>
+    </form>
+  </body>
 </html>
