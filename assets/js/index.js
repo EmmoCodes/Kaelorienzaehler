@@ -12,7 +12,9 @@ const outputBmrKj = document.body.querySelector('.bmr-kj')
 const outputTotalKcal = document.body.querySelector('.total-kcal')
 const outputTotalKj = document.body.querySelector('.total-kj')
 
-calculatorBmr.addEventListener('submit', event => {
+const genderButtons = document.querySelectorAll('input[name="gender"]');
+
+const calc = event => {
   event.preventDefault()
 
   const heightValue = inputBodyHeight.value
@@ -48,4 +50,13 @@ calculatorBmr.addEventListener('submit', event => {
     outputTotalKcal.textContent = resultTotal.toFixed(3)
     outputTotalKj.textContent = (resultTotal * 4.184).toFixed(3)
   }
+}
+
+inputBodyHeight.addEventListener('change', calc)
+inputAge.addEventListener('change', calc)
+inputBodyWeight.addEventListener('change', calc)
+genderButtons.forEach((btn)=> {
+  btn.addEventListener('change', calc)
 })
+ActivityLevel.addEventListener('change', calc)
+calculatorBmr.addEventListener('submit', calc)
